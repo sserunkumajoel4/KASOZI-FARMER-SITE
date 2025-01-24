@@ -347,3 +347,6 @@ header {
         padding-bottom: 60px;
     }
 }
+*{
+    transition: all 1.8s  ease-in;
+}

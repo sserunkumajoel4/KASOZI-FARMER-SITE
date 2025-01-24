@@ -1,145 +1,344 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Kasozi Farmers Site - Your comprehensive resource for modern farming techniques, agricultural guides, and expert advice. Founded by Kasozi Henry.">
-    <meta name="theme-color" content="#4CAF50">
-    
-    <title>Kasozi Farmer Site - Modern Farming Resources & Community</title>
-    
-    <!-- Preload critical assets -->
-    <link rel="preload" href="./img/logo.jpg" as="image">
-    
+    <meta name="description" content="Kasozi Farmers Site. Founded by Kasozi Henry.">
+
+    <!-- Title -->
+    <title>Kasozi Farmers Site</title>
+
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-PLACEHOLDER" crossorigin="anonymous">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+       .sample-tutorials{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        
+       }
+       section{
+        width: 300px;
+        height: auto;
+       
+       } 
+
+     /* Enhanced Slider Styles */
+.frame {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - var(--header-height));
+    overflow: hidden;
+    background: var(--primary-color);
+}
+
+.slider-imgs {
+    height: 100%;
+    display: flex;
+    transition: transform 1.8s ease-in-out;
+}
+
+.slider-imgs img {
+    object-fit: cover;
+    height: 100%;
+}
+
+/* Enhanced Hero Content */
+.hero-content {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 2rem;
+    border-radius: 20px;
+    max-width: 600px;
+    width: 90%;
+}
+
+/* Enhanced Button Styles */
+.cta-button {
+    position: relative;
+    overflow: hidden;
+    background: var(--primary-color);
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: 1ll 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(44, 95, 45, 0.3);
+}
+
+/* Responsive Enhancements 
+@media (max-width: 768px) {
+    .hero-content {
+        padding: 1.5rem;
+        margin: 1rem;
+        width: calc(100% - 2rem);
+    }
+
+    .frame {
+        height: 50vh;
+    }
+    
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Loading Animation */
+.loading {
+    position: relative;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* the  */
+.sample-torials{
+    width: 100%;
+    height: 400px;
+    background-color: orangered;
+}
+    </style>
 </head>
 <body>
-    <header class="site-header">
-        <nav class="desktop-nav" aria-label="Main navigation">
+    <!-- Header Section -->
+    <header>
+        <nav class="desktop-nav">
             <div class="brand">
-                <img src="./img/logo.jpg" alt="Kasozi Farmer Site Logo" class="logo" width="150" height="50">
-                <h1>Kasozi Farmer Site</h1>
+                <img src="img/logo.jpg" alt="Kasozi Farmers Site Logo" class="logo">
+                <h1>Kasozi Farmers Site</h1>
             </div>
-            
-            <button class="mobile-menu" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu-panel">
-                <span class="hamburger-icon"></span>
-                <span class="sr-only">Menu</span>
-            </button>
-            
+            <button class="mobile-menu" aria-label="Toggle menu">☰</button>
             <ul class="nav-links desktop-links">
-                <li><a href="#home" aria-current="page">Home</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="#youtube" class="youtube-link">
-                    <span>Follow on YouTube</span>
-                    <i class="fab fa-youtube" aria-hidden="true"></i>
-                </a></li>
+                <li><a href="#youtube">Follow me on <i class="fab fa-youtube"></i></a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="main-content">
+    <!-- Main Content -->
+    <div class="main">
+        <!-- Sidebar -->
         <aside class="sidebar">
-            <nav class="sidebar-nav" aria-label="Secondary navigation">
+            <nav class="sidebar-nav">
                 <ul class="sidebar-menu">
-                    <!-- Move AdSense code outside of navigation list -->
                     <li><a href="#tutorials">Tutorials & Guides</a></li>
                     <li><a href="#crops">Crops & Plants</a></li>
                     <li><a href="#livestock">Livestock</a></li>
                     <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#questions">Common Agricultural Questions</a></li>
+                    <li><a href="#questions">Agriculture FAQs</a></li>
                     <li><a href="#trends">Agricultural Trends</a></li>
                     <li><a href="#success">Success Stories</a></li>
                     <li><a href="#developer">Site Developer</a></li>
                 </ul>
-                
-                <!-- AdSense placement -->
-                <div class="ad-container">
-                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9256694793312545" crossorigin="anonymous"></script>
-                    <ins class="adsbygoogle"
-                         style="display:block"
-                         data-ad-client="ca-pub-9256694793312545"
-                         data-ad-slot="1793822220"
-                         data-ad-format="auto"
-                         data-full-width-responsive="true"></ins>
-                    <script>
-                         (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
-                </div>
-                
-                <div class="social-section">
-                    <button class="connect-btn" aria-expanded="false" aria-controls="social-links">
-                        <h2>Connect with us</h2>
-                    </button>
-                    <ul class="social-links" id="social-links">
-                        <li><a href="#whatsapp" aria-label="Connect on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp</a></li>
-                        <li><a href="#twitter" aria-label="Follow on Twitter"><i class="fab fa-twitter" aria-hidden="true"></i> Twitter</a></li>
-                        <li><a href="#youtube" aria-label="Subscribe on YouTube"><i class="fab fa-youtube" aria-hidden="true"></i> YouTube</a></li>
-                        <li><a href="#google" aria-label="Find us on Google"><i class="fab fa-google" aria-hidden="true"></i> Google</a></li>
-                        <li><a href="#facebook" aria-label="Follow on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i> Facebook</a></li>
-                        <li><a href="#linkedin" aria-label="Connect on LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
-                        <li><a href="mailto:contact@example.com" aria-label="Send us an email"><i class="fas fa-envelope" aria-hidden="true"></i> Email</a></li>
-                    </ul>
-                </div>
+
+             
             </nav>
         </aside>
 
-        <main id="main-content">
-            <section class="hero-section" aria-labelledby="hero-title">
-                <img src="./img/KIMG0643.JPG" alt="Lush agricultural landscape showing fertile farmland" class="hero-image" width="1200" height="600">
-                <div class="hero-content">
-                    <h2 id="hero-title">Welcome to Kasozi Farmer Site</h2>
-                    <div class="hero-text">
-                        <p>Discover modern farming techniques, connect with expert agriculturists, and access valuable resources to enhance your farming practices. Our platform is dedicated to empowering farmers with knowledge and tools for sustainable agriculture.</p>
-                        <p>Join our growing community of successful farmers and learn about the latest innovations in agricultural technology, crop management, and sustainable farming practices. Whether you're a seasoned farmer or just starting out, we're here to support your agricultural journey.</p>
-                    </div>
-                    <a href="#get-started" class="cta-button">Get Started</a>
-                </div>
-            </section>
+        <!-- Hero Section -->
+        <main class="hero-section">
+           <div class="frame">
+            <div class="slider-imgs">
+                <img src="img/coffee farmers happy.jpg" alt="Agricultural landscape" class="hero-image" style="">
+                <img src="img/image3.png" alt="Agricultural landscape" class="hero-image">
+                <img src="img/Unfairtrade_Robert-Buule-Three-2000x1333.jpg" alt="Agricultural landscape" class="hero-image">
+                <img src="img/image2.png" alt="Agricultural landscape" class="hero-image">
+                <img src="img/The-Sisters-use-a-solar-drier-to-dry-coffee.jpg" alt="Agricultural landscape" class="hero-image">
+               </div>
+           </div>
+            <div class="hero-content">
+                <h2>Welcome to Kasozi Farmers Site</h2>
+                <p>
+                    Discover modern farming techniques, connect with expert agriculturists, 
+                    and access valuable resources to enhance your farming practices. Our 
+                    platform is dedicated to empowering farmers with knowledge and tools 
+                    for sustainable agriculture.
+                </p>
+                <p>
+                    Join our growing community of successful farmers and learn about the 
+                    latest innovations in agricultural technology, crop management, and 
+                    sustainable farming practices. Whether you're a seasoned farmer or 
+                    just starting out, we're here to support your agricultural journey.
+                </p>
+                <a href="#get-started" class="cta-button">Get Started</a>
+            </div>
         </main>
 
-        <div id="mobile-menu-panel" class="mobile-menu-panel" hidden>
-            <nav aria-label="Mobile navigation">
-                <ul class="mobile-sidebar-menu">
-                    <li><a href="#tutorials">Tutorials & Guides</a></li>
-                    <li><a href="#crops">Crops & Plants</a></li>
-                    <li><a href="#livestock">Livestock</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#questions">Common Agricultural Questions</a></li>
-                    <li><a href="#trends">Agricultural Trends</a></li>
-                    <li><a href="#success">Success Stories</a></li>
-                    <li><a href="#developer">Site Developer</a></li>
-                </ul>
+        
 
-                <div class="mobile-social-section">
-                    <button class="mobile-connect-btn" aria-expanded="false" aria-controls="mobile-social-links">
-                        <h2>Connect with us</h2>
-                    </button>
-                    <ul class="mobile-social-links" id="mobile-social-links">
-                        <li><a href="#whatsapp" aria-label="Connect on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp</a></li>
-                        <li><a href="#twitter" aria-label="Follow on Twitter"><i class="fab fa-twitter" aria-hidden="true"></i> Twitter</a></li>
-                        <li><a href="#youtube" aria-label="Subscribe on YouTube"><i class="fab fa-youtube" aria-hidden="true"></i> YouTube</a></li>
-                        <li><a href="#google" aria-label="Find us on Google"><i class="fab fa-google" aria-hidden="true"></i> Google</a></li>
-                        <li><a href="#facebook" aria-label="Follow on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i> Facebook</a></li>
-                        <li><a href="#linkedin" aria-label="Connect on LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
-                        <li><a href="mailto:contact@example.com" aria-label="Send us an email"><i class="fas fa-envelope" aria-hidden="true"></i> Email</a></li>
-                    </ul>
-                </div>
-            </nav>
+        <!-- Mobile Navigation -->
+        <div class="mobile-menu-panel">
+            <ul class="mobile-sidebar-menu">
+                <li><a href="#tutorials">Tutorials & Guides</a></li>
+                <li><a href="#crops">Crops & Plants</a></li>
+                <li><a href="#livestock">Livestock</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#questions">Agriculture FAQs</a></li>
+                <li><a href="#trends">Agricultural Trends</a></li>
+                <li><a href="#success">Success Stories</a></li>
+                <li><a href="#developer">Site Developer</a></li>
+            </ul>
+
+            <button class="mobile-connect-btn">Connect with Us</button>
+            <ul class="mobile-social-links">
+                <li><a href="#whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                <li><a href="#twitter"><i class="fab fa-twitter"></i> Twitter</a></li>
+                <li><a href="#youtube"><i class="fab fa-youtube"></i> YouTube</a></li>
+                <li><a href="#google"><i class="fab fa-google"></i> Google</a></li>
+                <li><a href="#facebook"><i class="fab fa-facebook"></i> Facebook</a></li>
+                <li><a href="#linkedin"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                <li><a href="mailto:contact@example.com"><i class="fas fa-envelope"></i> Email</a></li>
+            </ul>
         </div>
+
+        <!-- Bottom Navigation -->
+        <nav class="mobile-nav">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#youtube"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+        </nav>
     </div>
+<!-- Sample Tutorials Section -->
+<div class="sample-torials">
+    <div class="class">
 
-    <nav class="mobile-nav" aria-label="Mobile bottom navigation">
-        <ul class="nav-links">
-            <li><a href="#home" aria-current="page">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#youtube" aria-label="Visit our YouTube channel"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
-        </ul>
-    </nav>
+    </div>
+    
+</div>
 
-    <script src="./script.js" defer></script>
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        let sliderIndex = 1;
+    setInterval(() => { 
+    
+    let slider = document.querySelector(".slider-imgs");
+    slider.style.transform = "translateX( &{})"; 
+    },2000);
+    
+
+
+
+    // Slider configuration
+const sliderConfig = {
+    interval: 5000,
+    transition: 1800, // Matches your CSS transition time
+    autoplay: true
+};
+
+// DOM Elements
+const slider = document.querySelector('.slider-imgs');
+const images = slider.querySelectorAll('img');
+const totalImages = images.length;
+let currentIndex = 0;
+
+// Initialize slider dimensions
+function initializeSlider() {
+    slider.style.width = `${totalImages * 100}%`;
+    images.forEach(img => {
+        img.style.width = `${100 / totalImages}%`;
+    });
+}
+
+// Slide to specific index
+function slideTo(index) {
+    currentIndex = index;
+    const offset = -(100 / totalImages) * currentIndex;
+    slider.style.transform = `translateX(${offset}%)`;
+}
+
+// Next slide
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % totalImages;
+    slideTo(currentIndex);
+}
+
+// Previous slide
+function prevSlide() {
+    currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+    slideTo(currentIndex);
+}
+
+// Add navigation dots
+function addNavigation() {
+    const nav = document.createElement('div');
+    nav.className = 'slider-nav';
+    nav.style.cssText = `
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+        z-index: 10;
+    `;
+
+    for (let i = 0; i < totalImages; i++) {
+        const dot = document.createElement('button');
+        dot.className = 'slider-dot';
+        dot.style.cssText = `
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: 2px solid white;
+            background: ${i === 0 ? 'white' : 'transparent'};
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        `;
+        dot.addEventListener('click', () => {
+            slideTo(i);
+            updateDots();
+        });
+        nav.appendChild(dot);
+    }
+
+    slider.parentElement.appendChild(nav);
+}
+
+// Update navigation dots
+function updateDots() {
+    const dots = document.querySelectorAll('.slider-dot');
+    dots.forEach((dot, i) => {
+        dot.style.background = i === currentIndex ? 'white' : 'transparent';
+    });
+}
+
+// Initialize slider
+document.addEventListener('DOMContentLoaded', () => {
+    initializeSlider();
+    addNavigation();
+    
+    if (sliderConfig.autoplay) {
+        setInterval(nextSlide, sliderConfig.interval);
+    }
+});
+    </script>
 </body>
 </html>
